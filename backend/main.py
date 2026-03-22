@@ -1,7 +1,11 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import chat, session
-from app.config import settings
+from config import settings
 
 app = FastAPI(title="Smart Data Analyst", version="0.1.0")
 
